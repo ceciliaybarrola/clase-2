@@ -4,11 +4,12 @@ mostrar el importe con un Descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
-    var sueldo
-    var rta
+    var aporte;
+    var descuento;
 
-    sueldo=document.getElementById("importe").value;
-    rta=parseInt(sueldo) % (parseInt(sueldo)*25/100);
+    aporte=document.getElementById("importe").value;
+    descuento=parseInt(aporte) - (parseInt(aporte) /100* 25);
+    document.getElementById("resultado").value=descuento;
 
-    document.getElementById("resultado").value=rta;
 }
+
